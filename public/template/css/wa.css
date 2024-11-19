@@ -1,0 +1,177 @@
+@media only screen and (max-width: 600px) {
+    .chat-box2 {
+        width: 120px;
+        right: 100px;
+    }
+    .chat-box {
+        width: 210px;
+        right: 10px;
+    }
+    }
+
+    .chat-box2 {
+    font:normal normal 14px/1.4 Tahoma,Verdana,Sans-Serif;
+    color:#333;
+    width:250px; /* Chatbox width */
+    right:100px;
+    border:1px solid #344150;
+    border-bottom:none;
+    background-color:white;
+    position:fixed;
+    bottom:0;
+    z-index:9999;
+    -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    -moz-box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    box-shadow:1px 1px 5px rgba(0,0,0,.2);
+
+    }
+
+    .chat-box2 > input[type="checkbox"] {
+    display:block;
+    margin:0 0;
+    padding:0 0;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    width:100%;
+    height:26px;
+    z-index:4;
+    cursor:pointer;
+    opacity:0;
+    filter:alpha(opacity=0);
+    }
+
+    .chat-box2 > label {
+    display:block;
+    height:24px;
+    line-height:24px;
+    background-color:#2e8dc7;
+    color:white;
+
+    font-weight:bold;
+    padding:0 1em 1px;
+    }
+
+    .chat-box2 > label:before {content:attr(data-collapsed)}
+
+    .chat-box2 .chat-box2-content {
+    padding: 0;
+        display:none;
+    }
+    .operator-list2 {
+    padding: 0; 
+    border: 0px solid red; 
+    margin-top:0;
+    }
+    .operator-list2 ul{
+    list-style: none;
+    width: 100%;
+    }
+    .operator-list2 li{
+    cursor: pointer;
+    padding: 10px;
+    }
+
+    .operator-list2 li:hover{
+    background: #dfdfdf;
+    }
+    .operator-list2 ul li img{
+    border-radius: 20px 20px 20px 20px; border: 0px solid red; float: left; vertical-align: bottom; margin-right: 5px;
+    }
+
+    .chat-sign2{
+    padding: 10px;
+    }
+    .chat-box2-content input{
+    width: 100%;
+    }
+
+
+    /* hover state */
+    .chat-box2 > input[type="checkbox"]:hover + label {background-color:#2e8dc7}
+
+    /* checked state */
+    .chat-box2 > input[type="checkbox"]:checked + label {background-color:#2e8dc7}
+    .chat-box2 > input[type="checkbox"]:checked + label:before {content:attr(data-expanded)}
+    .chat-box2 > input[type="checkbox"]:checked ~ .chat-box2-content {display:block}
+
+    .float2{
+    position:fixed;
+    width:60px;
+    height:60px;
+    right: 110px;
+    bottom:40px;
+    background-color:#76B500;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2);
+        -moz-box-shadow:1px 1px 5px rgba(0,0,0,.2);
+        box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    z-index:1000;
+    animation: bot-to-top 0.5s ease-out;
+    }
+
+    .float2:hover, .float2:active, .float2:focus {
+    color: white;
+    }
+
+    ul.menu-chat2{
+    position:fixed;
+    right: 110px;
+    bottom:80px;
+    padding-bottom:20px;
+    z-index:100;
+    }
+
+    ul.menu-chat2 li{
+    list-style:none;
+    margin-bottom:10px;
+    }
+
+    ul.menu-chat2 li a{
+    background-color:#76B500;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2);
+        -moz-box-shadow:1px 1px 5px rgba(0,0,0,.2);
+        box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    width:60px;
+    height:60px;
+    display:block;
+    }
+
+    ul.menu-chat2:hover{
+    visibility:visible!important;
+    opacity:1!important;
+    }
+
+    .my-float2{
+    font-size:24px;
+    margin-top:18px;
+    }
+
+    .my-float3{
+    font-size:10px;
+    margin-top:20px;
+    display: inline-block;
+    }
+
+    a#menu-share2 + ul.menu-chat2{
+    visibility: hidden;
+    }
+
+    a#menu-share2:hover + ul.menu-chat2{
+    visibility: visible;
+    animation: scale-in 0.5s;
+    }
+
+    a#menu-share2 i{
+    animation: rotate-in 0.5s;
+    }
+
+    a#menu-share2:hover > i{
+    animation: rotate-out 0.5s;
+    }
