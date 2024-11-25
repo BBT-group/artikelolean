@@ -202,11 +202,11 @@ class Frondend extends BaseController
 
         $data = [
             'artikels' => $artikels,
-            'chatwa' => $this->chatwa->where('aktif', '1')->first(),
-            'menu' => $this->menu->findAll(),
-            'contact' => $this->contact->findAll(),
-            'link' => $this->link->findAll(),
-            'video' => $this->video->where('aktif', '1')->first(),
+            // 'chatwa' => $this->chatwa->where('aktif', '1')->first(),
+            // 'menu' => $this->menu->findAll(),
+            // 'contact' => $this->contact->findAll(),
+            // 'link' => $this->link->findAll(),
+            // 'video' => $this->video->where('aktif', '1')->first(),
             'kategori' => $this->kategoriArtikel->findAll(),
             'kategoris' => $this->kategoriArtikel->find($id)
         ];

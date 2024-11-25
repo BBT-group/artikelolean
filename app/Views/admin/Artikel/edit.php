@@ -21,7 +21,7 @@ Tambah
     <div class="card">
         <form action="<?= base_url('administrator/artikel/update') ?>" method="post">
             <?= csrf_field() ?>
-            <input type="text" name="id_ms_" required value="<?= $artikel['id_ms_artikel']; ?>" hidden>
+            <input type="text" name="id_ms_artikel" required value="<?= $artikel['id_ms_artikel']; ?>" hidden>
             <div class="mb-3">
                 <label for="judul" class="form-label">Judul:</label>
                 <input type="text" class="form-control" id="judul" name="judul" value="<?= $artikel['judul']; ?>">
@@ -40,7 +40,7 @@ Tambah
             </div>
             <div class="mb-3">
                 <label for="tanggal" class="form-label">Tanggal Waktu:</label>
-                <input type="datetime-local" class="form-control" id="tanggal" name="tgl_waktu" value="<?= $artikel['tanggal']; ?>">
+                <input type="datetime-local" class="form-control" id="tanggal" name="tanggal" value="<?= $artikel['tanggal']; ?>">
             </div>
             <div class="mb-3">
                 <label for="isi" class="form-label">Isi:</label>

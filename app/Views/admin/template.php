@@ -114,7 +114,7 @@
     </script>
     <script src="<?php echo base_url('/ckeditor/ckeditor.js') ?>"></script>
     <script>
-        CKEDITOR.replace('deskripsi', {
+        CKEDITOR.replace('isi', {
             filebrowserUploadUrl: "<?= base_url('administrator/foto/image-upload/upload') ?>",
             filebrowserUploadMethod: 'form',
         });

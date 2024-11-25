@@ -32,7 +32,7 @@ Tambah
                         <?php foreach ($kategori as $item): ?>
                             <option value="<?= $item['id_ms_kategori_artikel'] ?>"><?= $item['nama_kategori'] ?></option>
                         <?php endforeach; ?>
-                        <?php dd($item); ?>
+                        
                     <?php else: ?>
                         <option value="">No kategori found</option>
                     <?php endif; ?>

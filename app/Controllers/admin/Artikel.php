@@ -34,59 +34,30 @@ class Artikel extends BaseController
         ];
         return view('Admin/Artikel/tambah', $data);
     }
-    // public function simpan()
-    // {
-    //     $data = [
-    //         'id_ms_artikel' => $this->request->getPost('id_ms_artikel'),
-    //         'judul' => $this->request->getPost('judul'),
-    //         'id_ms_kategori_artikel' => $this->request->getPost('kategori'),
-    //         'aktif' => 1,
-    //         'tanggal' => $this->request->getPost('tanggal'),
-    //         'isi' => $this->request->getPost('isi')
-    //     ];
-    //     try {
-    //         // Attempt to insert the data into the database
-    //         if ($this->artikelModel->save($data)) {
-    //             return redirect()->to('administrator/artikel')->with('message', 'Data inserted successfully');
-    //         } else {
-    //             return redirect()->back()->withInput()->with('error', 'Failed to insert data');
-    //         }
-    //     } catch (Exception $e) {
-    //         // Catch any database-related errors
-    //         return redirect()->back()->withInput()->with('error', 'Database error: ' . $e->getMessage());
-    //     }
-    // }
-
     public function simpan()
     {
-        $kategoriId = $this->request->getPost('kategori');
-
-        // Check if the selected category exists
-        if (!$this->kategoriArtikelModel->find($kategoriId)) {
-            return redirect()->back()->withInput()->with('error', 'Invalid category selected.');
-        }
-
         $data = [
-        
+            'id_ms_artikel' => $this->request->getPost('id_ms_artikel'),
             'judul' => $this->request->getPost('judul'),
-            'id_ms_kategori_artikel' => $kategoriId,
+            'id_ms_kategori_artikel' => $this->request->getPost('kategori'),
             'aktif' => 1,
             'tanggal' => $this->request->getPost('tanggal'),
             'isi' => $this->request->getPost('isi')
         ];
-
-        dd($data);
-
         try {
+            // Attempt to insert the data into the database
             if ($this->artikelModel->save($data)) {
                 return redirect()->to('administrator/artikel')->with('message', 'Data inserted successfully');
             } else {
                 return redirect()->back()->withInput()->with('error', 'Failed to insert data');
             }
         } catch (Exception $e) {
+            // Catch any database-related errors
             return redirect()->back()->withInput()->with('error', 'Database error: ' . $e->getMessage());
         }
     }
+
+    
 
     public function status($id)
     {

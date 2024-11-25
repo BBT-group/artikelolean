@@ -10,7 +10,7 @@ class ArtikelModel extends Model
 {
     protected $table = 'ms_artikel';
     protected $primaryKey = 'id_ms_artikel';
-    protected $allowedFields = ['judul', 'isi','tanggal', 'aktif', 'viewer', 'id_ms_kategori'];
+    protected $allowedFields = ['judul', 'isi','tanggal', 'aktif', 'viewer', 'id_ms_kategori_artikel'];
 
     public function getArtikelWithKategori($id)
     {
