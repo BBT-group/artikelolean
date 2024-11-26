@@ -118,6 +118,7 @@ $routes->group('', ['namespace' => 'App\Controllers\Admin'], function ($routes) 
             $routes->get('detail/(:num)', 'Link::detail/$1');
             $routes->get('hapus/(:num)', 'Link::hapus/$1');
         });
+        
         $routes->group('administrator/usermanager', admingroup, function ($routes) {
             $routes->get('/', 'UserManager::index');
             $routes->get('tambah', 'UserManager::tambah');

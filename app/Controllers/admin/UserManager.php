@@ -14,7 +14,7 @@ class UserManager extends BaseController
 
     public function __construct()
     {
-        $this->menu = new MenuModel();
+        
         $this->userModel = new UserManagerModel();
     }
 
@@ -22,7 +22,7 @@ class UserManager extends BaseController
     public function index()
     {
         $data = [
-            'menu' => $this->menu->findAll(),
+            
             'users' => $this->userModel->findAll()
         ];
         return view('Admin\UserManager\index', $data);
@@ -30,14 +30,14 @@ class UserManager extends BaseController
     public function tambah()
     {
         $data = [
-            'menu' => $this->menu->findAll(),
+            
         ];
         return view('Admin\UserManager\tambah', $data);
     }
     public function update($id)
     {
         $data = [
-            'menu' => $this->menu->findAll(),
+            
             'user' => $this->userModel->find($id),
             'type' => 'update'
 
@@ -57,9 +57,9 @@ class UserManager extends BaseController
             'online' => '0',
         ];
         if ($this->userModel->save($data)) {
-            return redirect()->to('/usermanager')->withInput();
+            return redirect()->to('administrator/usermanager')->withInput();
         } else {
-            return redirect()->to('/usermanager/tambah')->withInput();
+            return redirect()->to('administrator/usermanager/tambah')->withInput();
         }
     }
 
